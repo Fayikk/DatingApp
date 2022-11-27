@@ -53,3 +53,11 @@ C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\runtimes\win-arm\native\e_sqlite3.
 C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
