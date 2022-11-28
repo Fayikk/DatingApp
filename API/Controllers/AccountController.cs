@@ -32,6 +32,7 @@ namespace API.Controllers
             };
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
+           
             return user;
         }
 
@@ -64,5 +65,6 @@ namespace API.Controllers
             return await _context.Users.AnyAsync(x=>x.UserName==username.ToLower());
         }
 
+    
     }
 }

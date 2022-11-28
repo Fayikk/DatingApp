@@ -1,23 +1,26 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">DatingApp</a>
+      <a class="navbar-brand" routerLink="/">FOXES</a>
       
       
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf=" accountService.currentUser$ | async">
-          <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#">Matches</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Lists</a>
-          </li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+          <ng-container *ngIf="(accountService.currentUser$ | async) as user">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" routerLink="/members" routerLinkActive="active">Matches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/lists" routerLinkActive="active">Lists</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
+            </li> 
+          </ng-container>
           
-          <li class="nav-item">
-            <a class="nav-link ">Messages</a>
-          </li>
         </ul>
 
         <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
-            <a class="dropdown-toggle text-dark text-decoration-none" dropdownToggle>Welcome User</a>
+            <a class="dropdown-toggle text-dark text-decoration-none" dropdownToggle>Hoşgeldin {{model.username | uppercase}}</a>
             <div class="dropdown-menu mt-3" *dropdownMenu>
                 <a class="dropdown-item">Edit Profile</a>
                 <a class="dropdown-item" (click)="logout()">Logout</a>
