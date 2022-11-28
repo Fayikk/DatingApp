@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
   register(){
     this.accountService.register(this.model).subscribe({
       next:() =>{
-        this.toastr.success("Register process is succeded")
+       
         this.cancel()
       },
       error : error => this.toastr.error(error.error)
