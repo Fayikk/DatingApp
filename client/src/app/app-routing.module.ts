@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { TestErrorComponent } from './errors/test-error/test-error.component';
 import { HomeComponent } from './home/home.component';
 import { ListsComponent } from './lists/lists.component';
@@ -15,16 +17,15 @@ const routes: Routes = [
     canActivate:[AuthGuard],
     children:[
       {path:"members",component:MemberListComponent,canActivate:[AuthGuard]},
-       {path:'members/:id',component:MemberDetailComponent},
+      {path:'members/:id',component:MemberDetailComponent},
       {path:"lists",component:ListsComponent},
       {path:"messages",component:MessagesComponent},
     ]
-
   },
   {path:"errors",component:TestErrorComponent},
+  {path:"not-found",component:NotFoundComponent},
+  {path:"server-error",component:ServerErrorComponent},
   {path:"**",component:HomeComponent,pathMatch:'full'},//other lists
-
-
 ];
 
 @NgModule({

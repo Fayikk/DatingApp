@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DHK0He0auaZ/SBNLLQfmQVM55/phFuM8OZGIt8vzHsZX7WWbWwDC+ePj4Gik+SoKi0Ie5f9p+5U4mmPPTEVW+A==",
+  "dgSpecHash": "2X5GnDq+JcAZaym3dY0sRFrxfWojMusbube09l5GM44df7dKjM39iUpQude/jScXyrAVoIuIpFLBAbwT1/mtWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\fayik\\DatingApp\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\fayik\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",

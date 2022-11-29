@@ -20,7 +20,7 @@ namespace API.Controllers
         }    
 
         [HttpPost("register")] //api/account/register
-        public async Task<ActionResult<AppUser>> Register([FromBody]RegisterDto registerDto){
+        public async Task<ActionResult<AppUser>> Register(RegisterDto registerDto){
             
             if(await UserExist(registerDto.Username)) return BadRequest("Username is taken");
             

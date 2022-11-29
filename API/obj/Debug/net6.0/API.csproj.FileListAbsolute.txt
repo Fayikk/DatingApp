@@ -61,3 +61,5 @@ C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dl
 C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Data\UserSeedData.json
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Newtonsoft.Json.dll
