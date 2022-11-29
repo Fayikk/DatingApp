@@ -63,3 +63,5 @@ C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.
 C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Data\UserSeedData.json
 C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\fayik\DatingApp\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
