@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
@@ -14,6 +15,7 @@
             "args": [],
             "cwd": "${workspaceFolder}/API",
             "stopAtEntry": false,
+            "console":"integratedTerminal",
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
                 "action": "openExternally",
@@ -32,4 +34,5 @@
             "request": "attach"
         }
     ]
+    
 }
