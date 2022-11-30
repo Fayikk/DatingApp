@@ -60,7 +60,7 @@ namespace API.Controllers
         }
         [Authorize]
         [HttpPost("photo")]
-        public async Task<ActionResult<PhotoDto>> AddPhoto(IFormFile file){
+        public async Task<ActionResult<PhotoDto>> AddPhoto([FromForm] IFormFile file){
             var user = await _userRepository.GetUserByUsernameAsync(User.GetUserName());
             if (user == null)
             {
@@ -80,6 +80,7 @@ namespace API.Controllers
                 photo.IsMain = true;
             }
             user.Photos.Add(photo);
+
             if (await _userRepository.SaveAllAsync()) 
             {
                 return _mapper.Map<PhotoDto>(photo);

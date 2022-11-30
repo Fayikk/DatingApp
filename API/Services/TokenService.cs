@@ -18,9 +18,9 @@ namespace API
         {
             var claims = new List<Claim>
             {
-                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.NameId,user.UserName)
+                new Claim(ClaimTypes.GivenName,user.UserName)
             };
-
+//orda mısın sorun cloud da değil sorun user da daha doğğrusu token da ben token kullaıp iş yapmıştım token çalışıyordu sanki he o zaman bi auth açalım
             var creds = new SigningCredentials(_key,SecurityAlgorithms.HmacSha512Signature);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
