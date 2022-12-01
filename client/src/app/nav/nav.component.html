@@ -22,8 +22,9 @@
           </li>
         </ul>
 
-        <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
-            <a class="dropdown-toggle text-dark text-decoration-none" dropdownToggle>Hoşgeldin {{model.username | uppercase}}</a>
+        <div class="dropdown" *ngIf="accountService.currentUser$ | async as user"  dropdown>
+          <img src="{{user.photoUrl || '.assets/user.png'}}" alt="user photo">
+            <a class="dropdown-toggle text-dark text-decoration-none ms-1" dropdownToggle>Hoşgeldin {{model.username | uppercase}}</a>
             <div class="dropdown-menu mt-3" *dropdownMenu>
                 <a class="dropdown-item" routerLink="/member/edit">Edit Profile</a>
                 <a class="dropdown-item" (click)="logout()">Logout</a>

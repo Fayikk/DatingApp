@@ -13,6 +13,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
     }),
+    
    
   ],
   exports:[
