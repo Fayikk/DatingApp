@@ -18,7 +18,8 @@ namespace API
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.GivenName,user.UserName)
+                new Claim(JwtRegisteredClaimNames.NameId, user.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName)
             };
 //orda mısın sorun cloud da değil sorun user da daha doğğrusu token da ben token kullaıp iş yapmıştım token çalışıyordu sanki he o zaman bi auth açalım
             var creds = new SigningCredentials(_key,SecurityAlgorithms.HmacSha512Signature);

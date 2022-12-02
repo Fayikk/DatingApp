@@ -18,14 +18,14 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
     }),
     ReactiveFormsModule,
     BsDatepickerModule.forRoot(),
-    PaginationModule.forRoot(),
+    
   ],
   exports:[
     BsDropdownModule,
     ToastrModule,
     ReactiveFormsModule,
     BsDatepickerModule,
-    PaginationModule
+    
   ]
 })
 export class SharedModule { }

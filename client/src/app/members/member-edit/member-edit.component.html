@@ -20,10 +20,10 @@
                     <strong>Age:</strong>
                     <p>{{member.age}}</p>
                 </div>
-                <!-- <div>
+                <div>
                     <strong>Last active:</strong>
-                    <p>{{member.lastActive | timeago}}</p>
-                </div> -->
+                    <p>{{member.lastActive + 'Z' | timeago}}</p>
+                </div>
                 <div>
                     <strong>Member since:</strong>
                     <p>{{member.created | date: 'dd MMM yyyy'}}</p>

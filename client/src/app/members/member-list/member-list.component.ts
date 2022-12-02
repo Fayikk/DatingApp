@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { take } from 'rxjs';
 import { Member } from 'src/app/_models/member';
 import { Pagination } from 'src/app/_models/Pagination';
+import { User } from 'src/app/_models/user';
+import { UserParams } from 'src/app/_models/userParams';
+import { AccountService } from 'src/app/_services/account.service';
 import { MembersService } from 'src/app/_services/members.service';
 
 @Component({
@@ -13,10 +17,22 @@ export class MemberListComponent implements OnInit {
 
   members : Member[] = [];
   pagination: Pagination | undefined
-  pageNumber = 1; // ->2
-  pageSize = 5;
+  userParams: UserParams | undefined
+  user:User | undefined;
+  genderList = [{value : 'male', display: 'Males'}, {value: 'female' , display: 'Females' }]
+  
+  
+  constructor(private memberService:MembersService,private toastr:ToastrService,private accountService:AccountService) { 
 
-  constructor(private memberService:MembersService,private toastr:ToastrService) { }
+    this.accountService.currentUser$.pipe(take(1)).subscribe({
+      next : user => {
+        if(user){
+          this.userParams = new UserParams(user);
+          this.user = user;
+        }
+      }
+    })
+  }
 
   ngOnInit(): void 
   {
@@ -25,21 +41,32 @@ export class MemberListComponent implements OnInit {
    
   }
 
-  loadMembers(){
-    this.memberService.getMembers(this.pageNumber , this.pageSize).subscribe({
-      next : response => {
-        if (response.result && response.pagination) {
-          this.members = response.result;
-          this.pagination = response.pagination;
-
+  loadMembers() {
+    if (this.userParams) {
+      // this.memberService.setUserParams(this.userParams);
+      this.memberService.getMembers(this.userParams).subscribe({
+        next: response => {
+          if (response.result && response.pagination) {
+            this.members = response.result;
+            this.pagination = response.pagination;
+          }
         }
-      }
-    })
+      })
+    }
   }
 
+
+  resetFilters(){
+    if (this.user) {
+      this.userParams = new UserParams(this.user);
+      this.loadMembers();
+    }
+  }
+
+
   pageChanged(event : any){
-    if(this.pageNumber !== event.page){
-      this.pageNumber = event.page;
+    if(this.userParams &&  this.userParams?.pageNumber !== event.page){
+      this.userParams.pageNumber = event.page;
       this.loadMembers()
     }
   }
