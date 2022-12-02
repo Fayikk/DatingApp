@@ -62,11 +62,7 @@ import { DatePickerComponent } from './_forms/date-picker/date-picker.component'
     NgxGalleryModule,
     NgxSpinnerModule.forRoot({
       type:'line-scale-party'
-    }),
-   
-  
-
-   
+    }), 
   ],
   providers: [ 
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},

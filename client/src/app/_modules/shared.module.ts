@@ -4,6 +4,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+
 
 
 @NgModule({
@@ -16,12 +18,14 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     }),
     ReactiveFormsModule,
     BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
   ],
   exports:[
     BsDropdownModule,
     ToastrModule,
     ReactiveFormsModule,
     BsDatepickerModule,
+    PaginationModule
   ]
 })
 export class SharedModule { }
