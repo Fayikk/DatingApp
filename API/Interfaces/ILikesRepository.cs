@@ -1,5 +1,6 @@
 using API.DTOs;
 using API.Entities;
+using API.Helpers;
 
 namespace API.Interfaces
 {
@@ -9,6 +10,6 @@ namespace API.Interfaces
 
         Task<AppUser> GetUserWithLikes(int userId);
 
-        Task<IEnumerable<LikeDto>> GetUsersLikes(string predicate , int userId);
+        Task<PagedList<LikeDto>> GetUsersLikes(LikesParams likesParams);
     }
 }
