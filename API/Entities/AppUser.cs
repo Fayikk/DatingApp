@@ -27,6 +27,9 @@ namespace API.Entities
 
         public List<UserLike> LikedUsers { get; set; }
 
+        public List<Message> MessagesSent { get; set; }
+
+        public List<Message> MessageReceived { get; set; }
         // public static int GetAge(DateTime DateOfBirth){
         //        return DateTimeExtensions.CalculateAge(DateOfBirth);
         //   }

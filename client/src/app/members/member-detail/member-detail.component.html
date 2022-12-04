@@ -24,7 +24,7 @@
                    <div class="card-footer">
                        <div class="btn-group d-flex">
                            <button class="btn btn-primary">Like</button>
-                           <button class="btn btn-success">Messages</button>
+                           <button (click)="selectTab('Messages')" class="btn btn-success" >Messages</button>
                        </div>
                    </div>
                 </div>  
@@ -33,24 +33,23 @@
         </div>
         
         <div class="col-8">
-           <tabset class="member-tabs">
-                <tab heading="About {{member.knownAs}}">
+           <tabset class="member-tabset" #memberTabs>
+                <tab heading="About {{member.knownAs}}" (selectTab)="onTabActivated($event)">
                     <h4>Description</h4>
                     <p>{{member.introduction}}</p>
                     <h4>Looking For</h4>
                     <p>{{member.lookingFor}}</p>
                 </tab>
-                <tab heading="Interests">
+                <tab heading="Interests" (selectTab)="onTabActivated($event)">
                     <h4>Interests</h4>
                     <p>{{member.interests}}</p>
                 </tab>
-                <tab heading="Photos">
+                <tab heading="Photos" (selectTab)="onTabActivated($event)">
                     <h4>Photos will go here</h4>
                     <ngx-gallery [options]="galeryOptions" [images]="galeryImages" class="ngx-gallery"></ngx-gallery>
                 </tab>
-                <tab heading="Messages">
-                    <h4>Messages</h4>
-                    <!-- <p>{{member.interests}}</p> -->
+                <tab heading="Messages" (selectTab)="onTabActivated($event)">
+                   <app-member-messages [messages]="messages" ></app-member-messages>
                 </tab>
                 
            </tabset>
