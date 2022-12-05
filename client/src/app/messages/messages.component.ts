@@ -13,7 +13,7 @@ export class MessagesComponent implements OnInit {
   pagination? : Pagination;
   container = 'Unread';
   pageNumber = 1;
-  pageSize = 2;
+  pageSize = 15;
   loading=false;
 
   constructor(private messageService : MessageService) { }
@@ -28,11 +28,13 @@ export class MessagesComponent implements OnInit {
       next : response => {
         this.messages = response.result,
         this.pagination = response.pagination;
+        this.loading =false;
       }
     })
   }
 
   deleteMessage(id: number) {
+    console.log(id)
     this.messageService.deleteMessage(id).subscribe({
       next: () => this.messages?.splice(this.messages.findIndex(m => m.id === id), 1)
     })

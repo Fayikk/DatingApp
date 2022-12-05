@@ -47,7 +47,6 @@ namespace API.Data
                 _ => query.Where(u => u.RecipientUsername == messageParams.Username 
                     && u.RecipientDeleted == false && u.DateRead == null)
             };
-
             var messages = query.ProjectTo<MessageDto>(_mapper.ConfigurationProvider);
 
             return await PagedList<MessageDto>
