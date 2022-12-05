@@ -15,7 +15,7 @@ import { MessageService } from 'src/app/_services/message.service';
 export class MemberDetailComponent implements OnInit {
  
   @ViewChild('memberTabs' , {static : true}) memberTabs?: TabsetComponent;
-  member:Member | undefined;
+  member:Member = {} as Member;
   galeryOptions:NgxGalleryOptions[] = [];
   galeryImages : NgxGalleryImage[] = [];
   activeTab? : TabDirective;
@@ -24,23 +24,28 @@ export class MemberDetailComponent implements OnInit {
   constructor(private memberService:MembersService , private route : ActivatedRoute,private messageService:MessageService) { }
 
   ngOnInit(): void {
-    this.loadMember();
+    this.route.data.subscribe({
+      next: data => this.member = data['member']
+    })
+
     this.route.queryParams.subscribe({
-      next : params => {
+      next: params => {
         params['tab'] && this.selectTab(params['tab'])
       }
     })
 
     this.galeryOptions = [
       {
-        width:'500px',
-        height:'500px',
-        imagePercent:100,
-        thumbnailsColumns : 4,
-        imageAnimation : NgxGalleryAnimation.Slide,
-        preview:false
+        width: '500px',
+        height: '500px',
+        imagePercent: 100,
+        thumbnailsColumns: 4,
+        imageAnimation: NgxGalleryAnimation.Slide,
+        preview: false
       }
     ]
+
+    this.galeryImages = this.getImages();
     
   }
   getImages() {
@@ -56,22 +61,13 @@ export class MemberDetailComponent implements OnInit {
     return imageUrls;
   }
 
-  loadMember(){
-    var username = this.route.snapshot.paramMap.get('username');
-    if (!username) {
-      return;
-    }
-    this.memberService.getMember(username).subscribe({
-      next: member => {
-        this.member=member;
-        this.galeryImages = this.getImages();
-      }
-    })
-  }
+ 
 
   selectTab(heading : string){
-   
-      this.memberTabs!.tabs!.find(x => x.heading === heading)!.active = true
+   if (this.memberTabs) {
+    this.memberTabs.tabs.find(x => x.heading === heading)!.active = true
+
+   }
     
   }
 

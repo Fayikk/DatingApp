@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using API.DTOs;
 using API.Entities;
 using API.Helpers;
@@ -64,12 +60,12 @@ namespace API.Data
                 .Include(u => u.Sender).ThenInclude(p => p.Photos)
                 .Include(u => u.Recipient).ThenInclude(p => p.Photos)
                  .Where(
-                    m => m.RecipientUsername == currentUsername &&
+                    m => m.RecipientUsername == currentUsername && m.RecipientDeleted == false &&
                     m.SenderUsername == recipientUsername ||
-                    m.RecipientUsername == recipientUsername &&
+                    m.RecipientUsername == recipientUsername && m.SenderDeleted == false &&
                     m.SenderUsername == currentUsername
                 )
-                .OrderByDescending(m => m.MessageSent)
+                .OrderBy(m => m.MessageSent)
                 .ToListAsync();
 
                 var unreadMessages = messages.Where(m => m.DateRead == null &&
