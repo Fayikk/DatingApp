@@ -4,8 +4,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import { PaginationModule } from 'ngx-bootstrap/pagination';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -18,6 +17,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
     }),
     ReactiveFormsModule,
     BsDatepickerModule.forRoot(),
+    ModalModule.forRoot(),
     
   ],
   exports:[
@@ -25,6 +25,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
     ToastrModule,
     ReactiveFormsModule,
     BsDatepickerModule,
+    ModalModule 
     
   ]
 })
