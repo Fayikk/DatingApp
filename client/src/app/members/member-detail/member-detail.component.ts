@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery';
 import { TabDirective, TabsetComponent } from 'ngx-bootstrap/tabs';
 import { take } from 'rxjs';
@@ -28,6 +28,7 @@ export class MemberDetailComponent implements OnInit,OnDestroy {
 
   constructor(private accountService:AccountService 
               ,private route : ActivatedRoute
+              ,private router : Router
               ,private messageService:MessageService
               ,public presenceService:PresenceService) {
                 this.accountService.currentUser$.pipe(take(1)).subscribe({
@@ -35,6 +36,7 @@ export class MemberDetailComponent implements OnInit,OnDestroy {
                     if(user) this.user=user
                   }
                 })
+                this.router.routeReuseStrategy.shouldReuseRoute = () => false;
                }
   ngOnDestroy(): void {
     this.messageService.stopHubConnection();

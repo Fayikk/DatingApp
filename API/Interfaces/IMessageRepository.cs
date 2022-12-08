@@ -2,6 +2,7 @@ using API.DTOs;
 using API.Entities;
 using API.Helpers;
 using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace API.Interfaces
 {
@@ -23,5 +24,6 @@ namespace API.Interfaces
         void RemoveConnection(Connection connection);
         Task<Connection> GetConnection(string connectionId);
         Task<Group> GetMessageGroup(string groupName);
+        Task<Group> GetGroupForConnection(string connectionId);
     }
 }
