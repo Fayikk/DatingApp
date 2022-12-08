@@ -1,8 +1,7 @@
 using API.DTOs;
 using API.Entities;
 using API.Helpers;
-using Microsoft.AspNetCore.Components.Forms;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Newtonsoft.Json.Linq;
 
 namespace API.Interfaces
 {
@@ -10,17 +9,10 @@ namespace API.Interfaces
     {
         void AddMessage(Message message);
         void DeleteMessage(Message message);
-
         Task<Message> GetMessage(int id);
-
         Task<PagedList<MessageDto>> GetMessagesForUser(MessageParams messageParams);
-
-        Task<IEnumerable<MessageDto>> GetMessageThread(string currentUsername , string recipientUsername);       
-   
-        Task<bool> SaveAllAsync();
-
+        Task<IEnumerable<MessageDto>> GetMessageThread(string currentUserName, string recipientUserName); 
         void AddGroup(Group group);
-
         void RemoveConnection(Connection connection);
         Task<Connection> GetConnection(string connectionId);
         Task<Group> GetMessageGroup(string groupName);
