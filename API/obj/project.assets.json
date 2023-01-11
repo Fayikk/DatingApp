@@ -2257,11 +2257,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fayik\\DatingApp\\API\\API.csproj",
+      "projectUniqueName": "C:\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\fayik\\DatingApp\\API\\API.csproj",
+      "projectPath": "C:\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\fayik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fayik\\DatingApp\\API\\obj\\",
+      "outputPath": "C:\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\fayik\\AppData\\Roaming\\NuGet\\NuGet.Config",
