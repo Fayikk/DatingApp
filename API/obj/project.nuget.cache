@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "apE8JBerRlI53dUHSg23skvUafYvsXTZBQWc8H1qmCvf4XOdPtWRxMTdsaygsZXJZY0CKl9lZF4YqSrVEIgcng==",
+=======
+  "dgSpecHash": "9V0hMoYwlIoyPMW+xB1kdtdnZv6tLTacI9SuN/7wE7GDoossgCMg8naM4rzT8oCVIg6SpJDIjWWkfMalA3kKvQ==",
+>>>>>>> 67b411cb6634879333e2c7ee9cbd8f102d932372
   "success": true,
   "projectFilePath": "C:\\DatingApp\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -9,6 +13,9 @@
     "C:\\Users\\fayik\\.nuget\\packages\\cloudinarydotnet\\1.13.1\\cloudinarydotnet.1.13.1.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.10\\microsoft.aspnetcore.authentication.jwtbearer.6.0.10.nupkg.sha512",
+    "C:\\Users\\fayik\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.10\\microsoft.aspnetcore.cryptography.internal.6.0.10.nupkg.sha512",
+    "C:\\Users\\fayik\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.10\\microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512",
+    "C:\\Users\\fayik\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.10\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
@@ -25,6 +32,8 @@
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.extensions.dependencymodel\\6.0.0\\microsoft.extensions.dependencymodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\fayik\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.10\\microsoft.extensions.identity.core.6.0.10.nupkg.sha512",
+    "C:\\Users\\fayik\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.10\\microsoft.extensions.identity.stores.6.0.10.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\fayik\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
